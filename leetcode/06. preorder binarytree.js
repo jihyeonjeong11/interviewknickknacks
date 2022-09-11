@@ -2,6 +2,8 @@
 
 // 09/11 품. easy
 
+//preorder , postorder, inorder까지
+
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -36,5 +38,20 @@ const traversePreorder = (parent) => {
     list.push(parent.val)
 }
 traversePreorder(root)
+return list
+};
+
+
+var inorderTraversal = function(root) {
+  const list = []
+const traverseInorder = (parent) => {
+if(!parent) return
+
+traverseInorder(parent.left)
+list.push(parent.val)
+traverseInorder(parent.right)
+
+}
+traverseInorder(root)
 return list
 };
