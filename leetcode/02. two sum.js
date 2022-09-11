@@ -9,9 +9,7 @@
  * @return {number[]}
  */
  var twoSum = function(nums, target) {
-  let i = 0
-  let length = nums.length
-  let result=[]
+
   for(let i = 0; i<nums.length; i++){
       const n = nums[i]
       for(let j = i+1; j<nums.length; j++){
